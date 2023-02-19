@@ -21,10 +21,15 @@ def Name(x):
             y = 0
             for i in ma:
                 y += 1
+                print(y)
                 if i != l[0]:
-                    l[y] = str(mi[y])
+                    if i not in l:
+                        l[y] = i
+                    else:
+                        l[y] = str(mi[y - 1])
                 else:
                     l[y] = i
+                    y -= 1
             for i in l:
                 nam += i
             return nam
@@ -35,7 +40,6 @@ def Name(x):
 
 
 ##Testing some of my code through this:
-Name('')
 Name('I love you!')
 Name("BRANDON")
 Name(['test', 'I love you, my dear !', 'DIFFICULT CHOICE'])
