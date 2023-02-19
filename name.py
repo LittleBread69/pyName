@@ -7,16 +7,35 @@ def Name(x):
     l = []
 ##
     if type(x) == str:
-        for i in x:
-            l.append(i)
-        for i in mi:
-            y += 1
-            if i == l[0]:
-                l[0] = str(ma[y - 1])
-        for i in l:
-            nam += i
-        return nam
+        if x == '':
+            print("You can't input an empty str.")
+        else:
+            for i in x:
+                l.append(i)
+            for i in mi:
+                y += 1
+                if i == l[0]:
+                    l[0] = str(ma[y - 1])
+                else:
+                    pass
+            y = 0
+            for i in ma:
+                y += 1
+                if i != l[0]:
+                    l[y] = str(mi[y])
+                else:
+                    l[y] = i
+            for i in l:
+                nam += i
+            return nam
     elif type(x) == list:
         print(type(x))
     elif type(x) != list and type(x) != str:
         print(str(type(x)) + " not supported, please input a str or a list.")
+
+
+##Testing some of my code through this:
+Name('')
+Name('I love you!')
+Name("BRANDON")
+Name(['test', 'I love you, my dear !', 'DIFFICULT CHOICE'])
