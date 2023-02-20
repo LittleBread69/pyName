@@ -27,7 +27,6 @@ def Name(x):
                 y = 0
                 for i in ma:
                     y+= 1
-                    print(y)
                     if(i == l[0] and f == False):
                         z += 1
                         f = True
