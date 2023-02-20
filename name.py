@@ -39,7 +39,5 @@ def Name(x):
             for i in l:
                 nam += i
             return nam
-    elif type(x) == list:
-        print(type(x))
-    elif type(x) != list and type(x) != str:
-        print(str(type(x)) + " not supported, please input a str or a list.")
+    elif type(x) != str:
+        print(str(type(x)) + " not supported, please input a str.")
