@@ -5,7 +5,6 @@ def Name(x):
     y = 0
     nam = ''
     l = []
-
     if type(x) == str:
         if x == '':
             print("You can't input an empty str.")
