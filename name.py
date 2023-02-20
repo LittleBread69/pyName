@@ -5,7 +5,7 @@ def Name(x):
     y = 0
     nam = ''
     l = []
-##
+
     if type(x) == str:
         if x == '':
             print("You can't input an empty str.")
@@ -20,16 +20,14 @@ def Name(x):
                     pass
             y = 0
             for i in ma:
-                y += 1
+                y+= 1
                 print(y)
-                if i != l[0]:
-                    if i not in l:
-                        l[y] = i
-                    else:
-                        l[y] = str(mi[y - 1])
+                if i == l[0]:
+                    pass
+                elif i == l[int(y)]:
+                    l[y - 1] = str(mi[y - 1])
                 else:
-                    l[y] = i
-                    y -= 1
+                    pass
             for i in l:
                 nam += i
             return nam
@@ -38,8 +36,4 @@ def Name(x):
     elif type(x) != list and type(x) != str:
         print(str(type(x)) + " not supported, please input a str or a list.")
 
-
-##Testing some of my code through this:
-Name('I love you!')
-Name("BRANDON")
-Name(['test', 'I love you, my dear !', 'DIFFICULT CHOICE'])
+print(Name('I'))
