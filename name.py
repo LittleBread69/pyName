@@ -18,16 +18,26 @@ def Name(x):
                     l[0] = str(ma[y - 1])
                 else:
                     pass
-            y = 0
-            for i in ma:
-                y+= 1
-                print(y)
-                if i == l[0]:
-                    pass
-                elif i == l[int(y - 1)]:
-                    l[y - 1] = str(mi[y - 1])
-                else:
-                    pass
+            k = 1
+            z = 0
+            f = False
+            while l[len(l) - k] not in ma and l[len(l) - k] not in mi:
+                k += 1
+            while l[len(l) - k] not in mi and l[len(l) - k] in ma:
+                y = 0
+                for i in ma:
+                    y+= 1
+                    print(y)
+                    if(i == l[0] and f == False):
+                        z += 1
+                        f = True
+                    elif(l[z] == ' '):
+                        z += 1
+                    elif i == l[int(z)]:
+                        l[z] = str(mi[y - 1])
+                        z += 1
+                    else:
+                        pass
             for i in l:
                 nam += i
             return nam
@@ -35,5 +45,3 @@ def Name(x):
         print(type(x))
     elif type(x) != list and type(x) != str:
         print(str(type(x)) + " not supported, please input a str or a list.")
-
-print(Name('I'))
