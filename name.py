@@ -24,7 +24,7 @@ def Name(x):
                 print(y)
                 if i == l[0]:
                     pass
-                elif i == l[int(y)]:
+                elif i == l[int(y - 1)]:
                     l[y - 1] = str(mi[y - 1])
                 else:
                     pass
